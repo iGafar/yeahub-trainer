@@ -1,28 +1,28 @@
 import { Button } from '@/shared/ui/button';
-import Flex from '@/shared/ui/flex/Flex';
+import { Flex } from '@/shared/ui/flex';
+import { Text } from '@/shared/ui/text';
+import cn from './Header.module.scss';
 
 export default function Header() {
   return (
-    <header>
-      <Flex justify="space-between" className="container">
-        <Flex gap={8} align="center">
+    <header className={cn.header}>
+      <Flex justify="space-between" align="center" className="container">
+        <Flex gap={8} align="center" className={cn.logo}>
           <img src="./icons/logo.svg" alt="logo" />
           <img src="./icons/logo-text.svg" alt="logo text" />
         </Flex>
 
-        <ul>
-          <li>
-            <p>База вопросов</p>
-          </li>
-          <li>
+        <nav className={cn.nav}>
+          <Flex gap={20}>
+            <Text span>База вопросов</Text>
             <p>Тренажер</p>
-          </li>
-        </ul>
+          </Flex>
+        </nav>
 
-        <div>
+        <Flex gap={26}>
           <Button>Вход</Button>
           <Button>Регистрация</Button>
-        </div>
+        </Flex>
       </Flex>
     </header>
   );

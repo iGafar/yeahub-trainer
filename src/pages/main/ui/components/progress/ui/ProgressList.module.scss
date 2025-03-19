@@ -1,0 +1,17 @@
+.item {
+  padding: 0 !important;
+
+  &:first-child {
+    position: relative;
+
+    &::after {
+      content: '';
+      display: inline-block;
+      position: absolute;
+      border-left: 1px solid var(--black-200);
+      height: 100%;
+      right: -20px;
+      top: 0;
+    }
+  }
+}

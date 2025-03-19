@@ -1,0 +1,36 @@
+.section {
+  background-color: var(--purple-100);
+  padding: 40px 0;
+  margin-bottom: max(13rem, 40px);
+}
+
+.top {
+  margin-bottom: 24px;
+}
+
+.title {
+  flex: 3;
+}
+
+.subtitle {
+  flex: 2;
+}
+
+.box_left {
+  flex: 3;
+
+  img {
+    width: 100%;
+  }
+}
+
+.box_right {
+  height: fit-content;
+  flex: 2;
+
+  img {
+    width: 104%;
+    margin-left: -5px;
+    margin-bottom: 24px;
+  }
+}

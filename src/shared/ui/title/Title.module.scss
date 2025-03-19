@@ -3,14 +3,17 @@
 
   &.h1 {
     font-size: 6rem;
+    text-transform: uppercase;
   }
 
   &.h2 {
     font-size: 4rem;
+    text-transform: uppercase;
   }
 
   &.h3 {
     font-size: 3.4rem;
+    text-transform: uppercase;
   }
 
   &.h4 {
@@ -20,5 +23,17 @@
   &.h5 {
     font-size: 1.8rem;
     text-transform: uppercase;
+  }
+
+  &.align_left {
+    text-align: left;
+  }
+
+  &.align_center {
+    text-align: center;
+  }
+
+  &.align_right {
+    text-align: right;
   }
 }

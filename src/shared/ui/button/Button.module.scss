@@ -6,4 +6,19 @@
   border-radius: 12px;
   padding: 0 28px;
   background-color: var(--purple-700);
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--white);
+  transition: all 0.3s ease;
+
+  &:hover {
+    background-color: var(--purple-500);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    transform: translateY(-1px);
+  }
+
+  &:active {
+    transform: translateY(0);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
 }

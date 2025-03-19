@@ -1,0 +1,29 @@
+.section {
+  margin-bottom: max(13rem, 40px);
+}
+
+.title {
+  margin-bottom: 45px;
+}
+
+.bottom {
+  img {
+    width: 100%;
+  }
+}
+
+.cards {
+  width: 50%;
+
+  & > div {
+    position: relative;
+
+    &::before {
+      content: url('./line.svg');
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateX(-110%);
+    }
+  }
+}

@@ -1,0 +1,18 @@
+.icon {
+  padding: 8.5px 9.5px;
+  border-radius: 8px;
+  width: fit-content;
+  height: fit-content;
+
+  &.gray {
+    background-color: var(--gray);
+  }
+
+  &.purple {
+    background-color: var(--purple-700);
+  }
+
+  &.yellow {
+    background-color: var(--yellow-700);
+  }
+}
