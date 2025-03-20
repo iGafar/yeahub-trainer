@@ -2,12 +2,12 @@
   font-weight: 500;
 
   &.h1 {
-    font-size: 6rem;
+    font-size: max(6rem, 20px);
     text-transform: uppercase;
   }
 
   &.h2 {
-    font-size: 4rem;
+    font-size: max(4rem, 20px);
     text-transform: uppercase;
   }
 

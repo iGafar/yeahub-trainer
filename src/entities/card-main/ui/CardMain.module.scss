@@ -4,8 +4,16 @@
   }
 
   .title {
-    margin-top: 40px;
+    margin-top: max(4rem, 24px);
     margin-bottom: 8px;
     text-transform: uppercase;
+  }
+}
+
+@media (max-width: 768px) {
+  .card {
+    .title {
+      text-transform: none;
+    }
   }
 }

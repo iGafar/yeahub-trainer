@@ -16,8 +16,6 @@ export default function CardMain(props: ICardMainProps) {
     iconType = 'gray',
   } = props;
 
-  // const back = type === 'default' ? 'white' : 'purple';
-
   const back = (function () {
     switch (type) {
       case 'secondary':

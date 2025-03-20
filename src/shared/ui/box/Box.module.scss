@@ -41,3 +41,11 @@
     box-shadow: 0px 4px 10px 0px #6a63761a;
   }
 }
+
+@media (max-width: 768px) {
+  .box {
+    &.size_medium {
+      padding: 16px;
+    }
+  }
+}
