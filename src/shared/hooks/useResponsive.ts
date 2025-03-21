@@ -3,7 +3,8 @@ import { useEffect, useState } from 'react';
 const breakpoints = {
   mobile: '(max-width: 639px)',
   tablet: '(max-width: 768px)',
-  mediumTablet: '(max-width: 1100px)',
+  mediumTablet: '(max-width: 900px)',
+  smallDesktop: '(max-width: 1100px)',
   desktop: '(max-width: 1279px)',
   largeDesktop: '(min-width: 1280px)',
 };
@@ -18,6 +19,9 @@ const useResponsive = () => {
   const [isMediumTablet, setIsMediumTablet] = useState(
     window.matchMedia(breakpoints.mediumTablet).matches,
   );
+  const [isSmallDesktop, setIsSmallDesktop] = useState(
+    window.matchMedia(breakpoints.smallDesktop).matches,
+  );
   const [isDesktop, setIsDesktop] = useState(
     window.matchMedia(breakpoints.desktop).matches,
   );
@@ -30,6 +34,7 @@ const useResponsive = () => {
       setIsMobile(window.matchMedia(breakpoints.mobile).matches);
       setIsTablet(window.matchMedia(breakpoints.tablet).matches);
       setIsMediumTablet(window.matchMedia(breakpoints.mediumTablet).matches);
+      setIsSmallDesktop(window.matchMedia(breakpoints.smallDesktop).matches);
       setIsDesktop(window.matchMedia(breakpoints.desktop).matches);
       setIsLargeDesktop(window.matchMedia(breakpoints.largeDesktop).matches);
     };
@@ -43,6 +48,7 @@ const useResponsive = () => {
     isMobile,
     isTablet,
     isMediumTablet,
+    isSmallDesktop,
     isDesktop,
     isLargeDesktop,
   };

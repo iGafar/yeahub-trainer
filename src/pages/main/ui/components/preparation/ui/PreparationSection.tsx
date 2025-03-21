@@ -1,5 +1,7 @@
+import { useResponsive } from '@/shared/hooks';
 import { FilterIcon, PenNewSquareIcon } from '@/shared/icons/main';
 import { Box } from '@/shared/ui/box';
+import { Button } from '@/shared/ui/button';
 import { Flex } from '@/shared/ui/flex';
 import IconWrapper from '@/shared/ui/icon-wrapper/IconWrapper';
 import { Text } from '@/shared/ui/text';
@@ -7,17 +9,24 @@ import { Title } from '@/shared/ui/title';
 import cn from './PreparationSection.module.scss';
 
 export default function PreparationSection() {
+  const { isMediumTablet } = useResponsive();
+
   return (
     <section className={cn.section}>
       <div className="container">
-        <Flex className={cn.top} gap={20} align="flex-end">
+        <Flex
+          className={cn.top}
+          gap={20}
+          direction={isMediumTablet ? 'column' : 'row'}
+          align={isMediumTablet ? 'center' : 'flex-end'}
+        >
           <Title className={cn.title}>Подготовьтесь к собеседованию в IT</Title>
           <Text className={cn.subtitle}>
             С YeaHub подготовка к собеседованию становится простым и
             захватывающим процессом.
           </Text>
         </Flex>
-        <Flex gap={20}>
+        <Flex gap={20} direction={isMediumTablet ? 'column' : 'row'}>
           <Box className={cn.box_left}>
             <div>
               <Flex gap={36}>
@@ -47,6 +56,12 @@ export default function PreparationSection() {
             </Flex>
           </Box>
         </Flex>
+
+        {isMediumTablet && (
+          <Flex justify="center" className={cn.btn_wrapper}>
+            <Button>Пройти собеседование</Button>
+          </Flex>
+        )}
       </div>
     </section>
   );

@@ -1,3 +1,4 @@
+import { useResponsive } from '@/shared/hooks';
 import { Box } from '@/shared/ui/box';
 import { Flex } from '@/shared/ui/flex';
 import { Text } from '@/shared/ui/text';
@@ -6,6 +7,8 @@ import ProgressList from './ProgressList';
 import cn from './ProgressSection.module.scss';
 
 export default function ProgressSection() {
+  const { isTablet } = useResponsive();
+
   return (
     <section className={cn.section}>
       <div className="container">
@@ -17,12 +20,18 @@ export default function ProgressSection() {
                 YeaHub предоставляет продвинутые инструменты для мониторинга
                 вашего обучения.
               </Text>
-
+              {isTablet && (
+                <div className={cn.img_wrapper}>
+                  <img src="./images/statistics.png" alt="statistics" />
+                </div>
+              )}
               <ProgressList />
             </div>
-            <div className={cn.img_wrapper}>
-              <img src="./images/statistics.png" alt="statistics" />
-            </div>
+            {!isTablet && (
+              <div className={cn.img_wrapper}>
+                <img src="./images/statistics.png" alt="statistics" />
+              </div>
+            )}
           </Flex>
         </Box>
       </div>

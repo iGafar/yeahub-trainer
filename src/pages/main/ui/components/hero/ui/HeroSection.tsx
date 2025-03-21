@@ -8,7 +8,7 @@ import { CardsData } from '../model/data';
 import cn from './HeroSection.module.scss';
 
 export default function HeroSection() {
-  const { isMediumTablet, isMobile } = useResponsive();
+  const { isSmallDesktop, isMobile } = useResponsive();
 
   return (
     <section className={cn.section}>
@@ -17,26 +17,26 @@ export default function HeroSection() {
           justify="space-between"
           gap={40}
           align="center"
-          direction={isMediumTablet ? 'column' : 'row'}
+          direction={isSmallDesktop ? 'column' : 'row'}
         >
           <Flex
             direction="column"
-            align={isMediumTablet ? 'center' : 'flex-start'}
+            align={isSmallDesktop ? 'center' : 'flex-start'}
           >
             <span className={cn.tag}>Топ вопросов</span>
 
             <Title
               level={1}
               className={cn.title}
-              align={isMediumTablet ? 'center' : 'left'}
+              align={isSmallDesktop ? 'center' : 'left'}
             >
-              YEAHUB {!isMediumTablet && <br />} помогает расти
-              {!isMediumTablet && <br />} и достигать целей
+              YEAHUB {!isSmallDesktop && <br />} помогает расти
+              {!isSmallDesktop && <br />} и достигать целей
             </Title>
 
             <Text
               className={cn.text}
-              align={isMediumTablet ? 'center' : 'left'}
+              align={isSmallDesktop ? 'center' : 'left'}
             >
               Развивайте и улучшайте свои навыки на одной платформе: изучайте
               новое, готовьтесь к собеседованиям, погружайтесь в нюансы или

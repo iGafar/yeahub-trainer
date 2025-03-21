@@ -1,3 +1,7 @@
+.list {
+  margin-bottom: max(4rem, 30px);
+}
+
 .item {
   padding: 0 !important;
 
@@ -12,6 +16,14 @@
       height: 100%;
       right: -20px;
       top: 0;
+    }
+  }
+}
+
+@media (max-width: 640px) {
+  .item {
+    &:first-child::after {
+      display: none;
     }
   }
 }

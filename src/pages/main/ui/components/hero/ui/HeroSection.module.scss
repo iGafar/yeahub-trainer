@@ -116,7 +116,7 @@
   }
 }
 
-@media (max-width: 650px) {
+@media (max-width: 639px) {
   .picture {
     width: 100%;
     margin-right: 0;
@@ -143,7 +143,7 @@
   .card_item {
     &:nth-child(2) {
       margin-top: 0;
-			
+
       &::after {
         display: none;
       }

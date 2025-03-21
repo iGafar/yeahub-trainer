@@ -1,3 +1,4 @@
+import { useResponsive } from '@/shared/hooks';
 import { Box } from '@/shared/ui/box';
 import { Flex } from '@/shared/ui/flex';
 import { Text } from '@/shared/ui/text';
@@ -7,20 +8,14 @@ import TrainerList from './TrainerList';
 import cn from './TrainerSection.module.scss';
 
 export default function TrainerSection() {
+  const { isMediumTablet } = useResponsive();
+
   return (
     <section className={cn.section}>
       <div className="container">
         <Box size="large">
           <Flex gap={20}>
-            <div className={cn.block_right}>
-              <Text color={900} size="large" weight="med" className={cn.title}>
-                Список вопросов
-              </Text>
-
-              <Box withShadow>
-                <QuestionsList />
-              </Box>
-            </div>
+            {!isMediumTablet && <QuestionsList />}
 
             <div className={cn.block_left}>
               <Title level={2} className={cn.title}>
@@ -29,6 +24,14 @@ export default function TrainerSection() {
               <Text className={cn.subtitle}>
                 Практикуйте изученные темы в нашем тренажёре.
               </Text>
+
+              {isMediumTablet && (
+                <img
+                  className={cn.list}
+                  src="./images/trainer-list.png"
+                  alt="list"
+                />
+              )}
 
               <TrainerList />
             </div>

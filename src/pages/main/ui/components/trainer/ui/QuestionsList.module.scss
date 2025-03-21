@@ -1,3 +1,14 @@
+.questions {
+  padding: 24px;
+  border: 24px solid var(--yellow);
+  border-bottom: none;
+  border-radius: 16px 16px 0 0;
+}
+
+.title {
+  margin-bottom: 24px;
+}
+
 .list {
   display: flex;
   flex-direction: column;
@@ -46,5 +57,23 @@
       border-radius: 4px;
       color: var(--white);
     }
+  }
+}
+
+@media (max-width: 1100px) {
+  .list {
+    width: 350px;
+  }
+}
+
+@media (max-width: 900px) {
+  .questions {
+    padding: 16px;
+    border-width: 16px;
+    margin-bottom: 20px;
+  }
+
+  .list {
+    width: 100%;
   }
 }
